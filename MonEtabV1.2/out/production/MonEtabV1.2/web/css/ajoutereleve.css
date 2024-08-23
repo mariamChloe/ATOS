@@ -1,0 +1,146 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Ajoute un fond léger pour mieux faire ressortir le formulaire */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns */    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remove default margin */
+}
+
+/* Flex container for form and class select section */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    padding: 20px;
+    border-radius: 8px;
+    gap: 20px; /* Space between form and class select section */
+}
+
+.form-wrapper {
+    flex: 1; /* Allow form to take up available space */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; /* Assure que les éléments remplissent toute la largeur du conteneur */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="date"] {
+    padding: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between; /* Sépare les boutons sur toute la largeur */
+    width: 100%;
+}
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+}
+
+.form-group button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+}
+
+.class-select {
+    flex: 0 0 250px; /* Fixed width for the class select section */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between elements inside this section */
+}
+
+.class-select select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.class-select button {
+    margin-top: 10px;
+    background-color: #1A4870;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.class-select button:hover {
+    background-color: #0f3051;
+}

@@ -1,0 +1,337 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Ajoute un fond léger pour mieux faire ressortir le formulaire */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+
+    width: 100%;
+    max-width: 400px; /* Réduit la largeur du formulaire */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center; /* Centre le contenu à l'intérieur */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; /* Assure que les éléments remplissent toute la largeur du conteneur */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="date"] {
+    padding: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between; /* Sépare les boutons sur toute la largeur */
+    width: 100%;
+}
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+}
+
+.form-group button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+}
+
+.class-select {
+    margin-left: auto; /* Position the select to the right */
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.class-select select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.class-select button {
+    margin-top: 10px;
+    background-color: #1A4870;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.class-select button:hover {
+    background-color: #0f3051;
+}
+
+li.active {
+    background-color: #1A4870; /* Example active background color */
+    color: dodgerblue; /* Example active text color */
+}
+
+li.active a {
+    color:dodgerblue ; /* Ensure the text color of the link matches the active state */
+}
+
+li.active img {
+    filter: brightness(0) invert(1); /* Optional: Invert icon colors for active state */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+
+
+
+
+.content {
+    margin-left: 250px; /* Largeur du sidebar */
+    padding: 40px;
+    width: calc(100% - 250px); /* Largeur totale moins la largeur du sidebar */
+    height: 100%; /* Occupe toute la hauteur disponible */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the form container */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 400px; /* Adjusted form width */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center; /* Center content inside */
+    justify-content: center;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px; /* Espace entre les boutons */
+}
+
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="date"] {
+    padding: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between; /* Sépare les boutons sur toute la largeur */
+    width: 100%;
+}
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+}
+
+.form-group button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+}
+
+.class-select {
+    margin-left: auto; /* Position the select to the right */
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.class-select select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.class-select button {
+    margin-top: 10px;
+    background-color: #1A4870;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.class-select button:hover {
+    background-color: #0f3051;
+}
+
+li.active {
+    background-color: #1A4870; /* Example active background color */
+    color: dodgerblue; /* Example active text color */
+}
+
+li.active a {
+    color:dodgerblue ; /* Ensure the text color of the link matches the active state */
+}
+
+li.active img {
+    filter: brightness(0) invert(1); /* Optional: Invert icon colors for active state */
+}

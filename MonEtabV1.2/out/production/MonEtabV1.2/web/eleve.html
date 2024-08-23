@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Élèves</title>
+    <link rel="stylesheet" href="css/eleve.css">
+
+</head>
+<body>
+<div class="sidebar">
+    <div>
+        <h2>Mon Etab</h2>
+        <a href="#">Tableau de bord</a>
+        <a href="#">Élèves</a>
+        <a href="#">Professeurs</a>
+        <a href="#">Utilisateurs</a>
+        <a href="#">Rapport</a>
+    </div>
+    <a href="#" class="logout">Déconnexion</a>
+</div><div class="content">
+    <h1>Liste des Élèves</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Classe</th>
+            <th>Matricule</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Ville</th>
+            <th>Date de Naissance</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="studentTableBody">
+        <!-- Les lignes seront ajoutées ici dynamiquement -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Données d'exemple pour les élèves
+    const students = [
+        { id: 1, classe: '10A', matricule: 'M123', nom: 'Dupont', prenom: 'Jean', ville: 'Paris', date_naissance: '2005-03-12' },
+        { id: 2, classe: '10B', matricule: 'M124', nom: 'Martin', prenom: 'Claire', ville: 'Lyon', date_naissance: '2005-05-22' },
+        // Ajoutez d'autres élèves si nécessaire
+    ];
+
+    const studentTableBody = document.getElementById('studentTableBody');
+
+    function renderStudents() {
+        studentTableBody.innerHTML = '';
+        students.forEach(student => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                    <td>${student.id}</td>
+                    <td>${student.classe}</td>
+                    <td>${student.matricule}</td>
+                    <td>${student.nom}</td>
+                    <td>${student.prenom}</td>
+                    <td>${student.ville}</td>
+                    <td>${student.date_naissance}</td>
+                    <td>
+                        <button class="edit-btn" onclick="editStudent(${student.id})">Modifier</button>
+                        <button class="delete-btn" onclick="deleteStudent(${student.id})">Supprimer</button>
+                    </td>
+                `;
+            studentTableBody.appendChild(row);
+        });
+    }
+
+    function editStudent(id) {
+        // Code pour modifier les informations de l'élève
+        alert(`Modifier l'élève avec l'ID: ${id}`);
+    }
+
+    function deleteStudent(id) {
+        // Code pour supprimer l'élève
+        const index = students.findIndex(student => student.id === id);
+        if (index > -1) {
+            students.splice(index, 1);
+            renderStudents();
+            alert(`L'élève avec l'ID: ${id} a été supprimé`);
+        }
+    }
+
+    // Initialiser l'affichage des élèves
+    renderStudents();
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-controls select {
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-controls button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-pdf {
+    background-color: #e74c3c;
+}
+
+.btn-excel {
+    background-color: #2ecc71;
+}
+
+.btn-pdf:hover, .btn-excel:hover {
+    opacity: 0.9;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-actions button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-actions button.cancel-button:hover {
+    opacity: 0.9;
+}
+
+li.active {
+    background-color: #1A4870;
+    color: dodgerblue;
+}
+
+li.active a {
+    color: dodgerblue;
+}
+
+li.active img {
+    filter: brightness(0) invert(1);
+}

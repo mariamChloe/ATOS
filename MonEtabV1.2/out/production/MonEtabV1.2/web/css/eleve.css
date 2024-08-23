@@ -1,0 +1,75 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Centre les éléments horizontalement */
+
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+.content {
+    margin-left: 250px; /* Largeur du sidebar */
+    padding: 40px;
+    width: calc(100% - 250px); /* Largeur totale moins la largeur du sidebar */
+    height: 100%; /* Occupe toute la hauteur disponible */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #929393;
+}
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}

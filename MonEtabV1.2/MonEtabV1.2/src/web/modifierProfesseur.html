@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier les Informations de l'Élève</title>
+    <link rel="stylesheet" href="css/professeur.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+<div class="sidebar">
+    <nav class="sidebar">
+
+        <ul>
+            <h1 style="font-size: 36px; font-weight: bold; text-align: center; text-decoration: underline;">MON Etab</h1>
+
+            <li><a href="#"><img src="images/menu.png" alt="Élèves"> Menu</a></li>
+
+            <li><a href="#"><img src="images/utilisateur.png" alt="Élèves"> Élèves</a></li>
+            <li><a href="#"><img src="images/utilisateur.png" alt="Utilisateurs"> Utilisateurs</a></li>
+            <li><a href="#"><img src="images/professeur.png" alt="Professeurs"> Professeurs</a></li>
+            <li><a href="#"><img src="images/rapport.png" alt="Rapports"> Rapports</a></li>
+            <li><a href="#"><img src="images/se-deconnecter.png" alt="Rapports"> Deconnexion</a></li>
+
+        </ul>
+    </nav>
+</div>
+<div class="container">
+    <h1>Modifier les Informations du professeur</h1>
+    <form id="edit-student-form">
+        <div class="form-group">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" value="John Doe" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Prénom:</label>
+            <input type="text" id="surname" name="surname" value="Doe" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date de Naissance:</label>
+            <input type="date" id="dob" name="dob" value="2000-01-01" required>
+        </div>
+        <div class="form-group">
+            <label for="class">Classe:</label>
+            <input type="text" id="class" name="class" value="Terminale" required>
+        </div>
+        <div class="form-group">
+            <label for="matricule">Matricule:</label>
+            <input type="text" id="matricule" name="matricule" value="123456" required>
+        </div>
+        <div class="form-group">
+            <label for="city">Ville:</label>
+            <input type="text" id="city" name="city" value="Abidjan" required>
+        </div>
+        <div class="form-actions">
+            <button type="submit">Enregistrer</button>
+            <button type="button" onclick="cancelEdit()">Annuler</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function cancelEdit() {
+        if (confirm("Voulez-vous vraiment annuler les modifications ?")) {
+            window.location.href = 'previous_page_url'; // Replace with actual URL
+        }
+    }
+
+    document.getElementById('edit-student-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Handle form submission logic here, e.g., AJAX request to update student details
+        alert('Les informations de l\'élève ont été modifiées avec succès.');
+    });
+</script>
+</body>
+</html>
