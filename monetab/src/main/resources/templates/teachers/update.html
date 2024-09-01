@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <html lang="en"
+          xlmlns="https://www.w3.org/1999/xhtml"
+          xmlns:th="http://www.thymeleaf.org"
+    >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Élèves</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+
+<body>
+<a href="#" class="return-button" onclick="window.location.href='/teachers'">
+    <i class="fas fa-arrow-left"></i>
+</a>
+
+<div class="container">
+    <h5>Modifier Infos Professeurs</h5>
+    <form id="edit-student-form">
+        <div class="form-group">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" value="John Doe" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Prénom:</label>
+            <input type="text" id="surname" name="surname" value="Doe" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date de Naissance:</label>
+            <input type="date" id="dob" name="dob" value="2000-01-01" required>
+        </div>
+        <div class="form-group">
+            <label for="class">Classe:</label>
+            <input type="text" id="class" name="class" value="Terminale" required>
+        </div>
+        <div class="form-group">
+            <label for="matricule">Matricule:</label>
+            <input type="text" id="matricule" name="matricule" value="123456" required>
+        </div>
+        <div class="form-group">
+            <label for="city">Ville:</label>
+            <input type="text" id="city" name="city" value="Abidjan" required>
+        </div>
+        <div class="form-actions">
+            <button type="submit">Enregistrer</button>
+            <button type="button" onclick="cancelEdit()">Annuler</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function cancelEdit() {
+        if (confirm("Voulez-vous vraiment annuler les modifications ?")) {
+            window.location.href = 'previous_page_url'; // Replace with actual URL
+        }
+    }
+
+    document.getElementById('edit-student-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Handle form submission logic here, e.g., AJAX request to update student details
+        alert('Les informations de l\'élève ont été modifiées avec succès.');
+    });
+</script>
+
+</body>
+</html>

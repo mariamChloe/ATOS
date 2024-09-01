@@ -1,0 +1,39 @@
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+.content {
+    margin-left: 250px; /* Largeur du sidebar */
+    padding: 40px;
+    width: calc(100% - 250px); /* Largeur totale moins la largeur du sidebar */
+    height: 100%; /* Occupe toute la hauteur disponible */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+}

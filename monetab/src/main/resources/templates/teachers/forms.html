@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Etab - Tableau de bord</title>
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+
+<div class="content">
+    <div class="back-button" style="justify-content: flex-end;">
+        <a th:href="@{/teachers}"><i class="fas fa-arrow-left"></i> Retour</a>
+    </div>
+    <form class="form-container" th:object="${teachers}" th:action="@{/teachers}" method="post">
+        <h1 th:text="${teachers.id == null}?'Ajouter professeur':'Modifier professeur'"></h1>
+
+        <input th:field="*{id}" type="hidden">
+
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            <input th:field="*{nom}" type="text" id="nom" name="nom">
+        </div>
+
+        <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input th:field="*{prenom}" type="text" id="prenom" name="prenom">
+        </div>
+
+        <div class="form-group gender">
+            <label>Genre</label>
+            <div>
+                <input th:field="*{genre}" type="radio" id="homme" name="sexe" value="M">
+                <label for="homme">Homme</label>
+            </div>
+            <div>
+                <input th:field="*{genre}" type="radio" id="femme" name="sexe" value="F">
+                <label for="femme">Femme</label>
+            </div>
+        </div>
+
+        <div class="form-group gender">
+            <label>Êtes-vous disponible ?</label>
+            <div>
+                <input th:field="*{vacant}" type="radio" id="faux" name="faux" value="false">
+                <label for="faux">Non</label>
+            </div>
+            <div>
+                <input th:field="*{vacant}" type="radio" id="vrai" name="vrai" value="true">
+                <label for="vrai">Oui</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="classe">Sélectionner une matière</label>
+            <select th:field="*{matiere}" id="classe" name="classe">
+                <option value="Français">Français</option>
+                <option value="Informatique">Informatique</option>
+                <option value="4eme">Science</option>
+                <option value="3eme">3ème</option>
+                <option value="2nde">2nde</option>
+                <option value="1ere">1ère</option>
+                <option value="terminale">Terminale</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input th:field="*{telephone}" type="text" id="telephone" name="telephone">
+        </div>
+
+        <div class="form-group">
+            <label for="ville">Ville</label>
+            <input th:field="*{ville}" type="text" id="ville" name="ville">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input th:field="*{email}" type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="date de naissane">Date</label>
+            <input th:field="*{dateDeNaissaince}" type="text" id="date de naissane" name="email">
+        </div>
+
+        <div class="form-actions">
+            <button class="btn-cancel" onclick="confirmCancel()">Annuler</button>
+            <button class="btn-save" type="submit">Enregistrer</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

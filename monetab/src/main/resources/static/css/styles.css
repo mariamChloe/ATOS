@@ -1,0 +1,1115 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+/*login css*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4A4A4A; /* Dark background to match the mockup */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-container input[type="submit"]:hover {
+    background-color: #bbb;
+}
+
+
+
+
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    border-radius: 10px;
+}
+.chart {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    border-radius: 10px;
+}
+.chart {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+table {
+    width: -80%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Centre la table horizontalement avec une marge en haut et en bas */
+
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #929393;
+}
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+/* style de la form ajout eleve */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns */    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remove default margin */
+}
+
+/* Flex container for form and class select section */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    padding: 20px;
+    border-radius: 8px;
+    gap: 20px; /* Space between form and class select section */
+}
+
+.form-wrapper {
+    flex: 1; /* Allow form to take up available space */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; /* Assure que les éléments remplissent toute la largeur du conteneur */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="date"] {
+    padding: 6px;
+}
+
+.form-actions {
+    display: flex; /* Aligne les boutons côte à côte */
+    justify-content: space-between; /* Sépare les boutons sur toute la largeur du conteneur */
+    width: 100%; /* Assure que le conteneur prend toute la largeur disponible */
+    gap: 10px; /* Espace entre les boutons */
+}
+
+/* style du boutton de retour */
+.return-button {
+    position: fixed; /* Fixe le bouton en haut de la page */
+    top: 20px; /* Espace depuis le haut de la page */
+    right: 20px; /* Espace depuis le côté gauche de la page */
+    display: inline-flex;
+    align-items: center;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    gap: 8px; /* Espace entre l'icône et le texte */
+    z-index: 1000; /* Assure que le bouton est au-dessus des autres éléments */
+}
+
+.return-button:hover {
+    opacity: 0.9;
+}
+
+.return-button i {
+    font-size: 18px; /* Ajustez la taille de l'icône si nécessaire */
+}
+
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+}
+
+.form-group button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+}
+
+.class-select {
+    flex: 0 0 250px; /* Fixed width for the class select section */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between elements inside this section */
+}
+
+.class-select select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.class-select button {
+    margin-top: 10px;
+    background-color: #1A4870;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.class-select button:hover {
+    background-color: #0f3051;
+}
+
+/*style teacher*/
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+
+/* Flex container to lay out children horizontally */
+.container {
+    display: flex; /* Enables horizontal layout */
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Space between the form and class select sections */
+}
+
+/* Form wrapper takes up the remaining space */
+.form-wrapper {
+    flex: 1; /* Expand to fill available space */
+}
+
+/* Class select section with fixed width */
+.class-select {
+    flex: 0 0 250px; /* Fixed width */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between elements inside this section */
+}
+
+/* Content container to center everything */
+.content {
+    display: flex; /* Enables horizontal layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.form-actions button[type="button"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Ajoute un fond léger pour mieux faire ressortir le formulaire */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Remove default margin */
+}
+
+/* Flex container for form and class select section */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Space between form and class select section */
+}
+
+.form-wrapper {
+    flex: 1; /* Allow form to take up available space */
+}
+
+
+
+.buttons-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="date"] {
+    padding: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between; /* Sépare les boutons sur toute la largeur */
+    width: 100%;
+}
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+}
+
+.form-group button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+}
+
+.class-select {
+    flex: 0 0 250px; /* Fixed width for the class select section */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between elements inside this section */
+}
+
+.class-select select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.class-select button {
+    margin-top: 10px;
+    background-color: #1A4870;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.class-select button:hover {
+    background-color: #0f3051;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+/* Container for header and button */
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.add-teacher {
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Ensure the image is responsive */
+.add-teacher img {
+    display: block;
+    margin-top: -100px; /* Move the icon up by 10px */
+
+}
+
+/*style users*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Ajoute un fond léger pour mieux faire ressortir le formulaire */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 40px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+
+    width: 100%;
+    max-width: 400px; /* Réduit la largeur du formulaire */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center; /* Centre le contenu à l'intérieur */
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%; /* Assure que les éléments remplissent toute la largeur du conteneur */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="date"] {
+    padding: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between; /* Sépare les boutons sur toute la largeur */
+    width: 100%;
+}
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+}
+
+.form-group button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+}
+
+.class-select {
+    margin-left: auto; /* Position the select to the right */
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.class-select select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.class-select button {
+    margin-top: 10px;
+    background-color: #1A4870;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.class-select button:hover {
+    background-color: #0f3051;
+}
+
+li.active {
+    background-color: #1A4870; /* Example active background color */
+    color: dodgerblue; /* Example active text color */
+}
+
+li.active a {
+    color:dodgerblue ; /* Ensure the text color of the link matches the active state */
+}
+
+li.active img {
+    filter: brightness(0) invert(1); /* Optional: Invert icon colors for active state */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+
+
+
+
+.content {
+    margin-left: 250px; /* Largeur du sidebar */
+    padding: 40px;
+    width: calc(100% - 250px); /* Largeur totale moins la largeur du sidebar */
+    height: 100%; /* Occupe toute la hauteur disponible */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the form container */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 400px; /* Adjusted form width */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center; /* Center content inside */
+    justify-content: center;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px; /* Espace entre les boutons */
+}
+
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input[type="date"] {
+    padding: 6px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between; /* Sépare les boutons sur toute la largeur */
+    width: 100%;
+}
+
+.form-group button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 48%;
+}
+
+.form-group button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-group button:hover {
+    opacity: 0.9;
+}
+
+.class-select {
+    margin-left: auto; /* Position the select to the right */
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.class-select select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.class-select button {
+    margin-top: 10px;
+    background-color: #1A4870;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.class-select button:hover {
+    background-color: #0f3051;
+}
+
+li.active {
+    background-color: #1A4870; /* Example active background color */
+    color: dodgerblue; /* Example active text color */
+}
+
+li.active a {
+    color:dodgerblue ; /* Ensure the text color of the link matches the active state */
+}
+
+li.active img {
+    filter: brightness(0) invert(1); /* Optional: Invert icon colors for active state */
+}
+/*style download*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.sidebar {
+    width: 200px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.sidebar a:hover {
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.sidebar .logout {
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-controls select {
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-controls button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-pdf {
+    background-color: #e74c3c;
+}
+
+.btn-excel {
+    background-color:#2ecc71;
+}
+
+.btn-pdf:hover, .btn-excel:hover {
+    opacity: 0.9;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-actions button.cancel-button {
+    background-color: #e74c3c;
+}
+
+.form-actions button.cancel-button:hover {
+    opacity: 0.9;
+}
+
+li.active {
+    background-color: #1A4870;
+    color: dodgerblue;
+}
+
+li.active a {
+    color: dodgerblue;
+}
+
+li.active img {
+    filter: brightness(0) invert(1);
+}
+
+

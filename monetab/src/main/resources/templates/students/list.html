@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <html lang="en"
+          xlmlns="https://www.w3.org/1999/xhtml"
+          xmlns:th="http://www.thymeleaf.org"
+    >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Élèves</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#" class="return-button" onclick="window.location.href='/teachers'">
+    <i class="fas fa-arrow-left"></i>
+</a>
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+<div class="content">
+    <div class="">
+        <div class="form-wrapper">
+            <h1>liste des eleves ({<span th:text="${students.size()}"></span>>})</h1>
+            <a th:href="@{/students/forms}" ><i class="fas fa-plus"></i>Ajout Eleve</a>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Matricule</th>
+                    <th>Email</th>
+
+                    <th>Classe</th>
+                    <th>Date de Naissance</th>
+                    <th>Téléphone</th>
+                    <th>Ville</th>
+                    <th>Genre</th>
+                    <th>Actions</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="student:${students}" >
+                    <td th:text="${student.getNom()}"></td>
+                    <td th:text="${student.getPrenom()}"></td>
+                    <td th:text="${student.getMatricule()}"></td>
+                    <td th:text="${student.getDateDeNaissaince()}"></td>
+                    <td th:text="${student.getClasse()}" ></td>
+                    <td th:text="${student.getTelephone()}"></td>
+                    <td th:text="${student.getVille()}"></td>
+                    <td th:text="${student.getGenre()}"></td>
+                    <td th:text="${student.getGenre()}"></td>
+
+
+
+
+                    <td>
+                        <a class="update-icon" th:href="@{/students/student/{id}(id=${student.id})}">Modifier</a>
+                        <button class="delete-icon" style="background-color: rgb(212, 21, 21);" >Supprimer</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+   <!-- <div class="class-select">
+        <label for="classSelect">Sélectionnez la Matière</label>
+        <select id="classSelect" onchange="selectClass(this.value)">
+            <option value="">Sélectionner votre matière</option>
+            <option value="6ème">Français</option>
+            <option value="5ème">Mathématiques</option>
+            <option value="4ème">Histoire</option>
+            <option value="3ème">Informatique</option>
+            <option value="2nde">Anglais</option>
+            <option value="1ère">SVT</option>
+            <option value="Terminale">Terminale</option>
+        </select>
+        <button type="button" onclick="selectClass()">Sélectionner</button>
+    </div>
+
+</div>
+-->
+
+
+
+
+</div>
+
+<script>
+    document.getElementById('addStudentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const id = document.getElementById('id').value;
+        const nom = document.getElementById('nom').value;
+        const prenom = document.getElementById('prenom').value;
+        const ville = document.getElementById('ville').value;
+        const classe = document.getElementById('classe').value;
+        const matricule = document.getElementById('matricule').value;
+        const dateNaissance = document.getElementById('dateNaissance').value;
+
+        if (!id || !nom || !prenom || !ville || !classe || !matricule || !dateNaissance) {
+            alert("Veuillez remplir tous les champs.");
+            return;
+        }
+
+        console.log({
+            id,
+            nom,
+            prenom,
+            ville,
+            classe,
+            matricule,
+            dateNaissance
+        });
+
+        alert("Élève ajouté avec succès!");
+    });
+
+    function selectClass(className) {
+        if (className) {
+            document.getElementById('classe').value = className;
+        }
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Élève</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+
+</head>
+<body>
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+
+<div class="content">
+    <div class="container">
+        <h1>Générer un Rapport</h1>
+        <form id="reportForm">
+            <div class="form-group">
+                <label for="reportList">Liste:</label>
+                <div class="form-controls">
+                    <select id="reportList" name="reportList" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="students">Liste des Élèves</option>
+                        <option value="teachers">Liste des Professeurs</option>
+                        <option value="users">Liste des Utilisateurs</option>
+                    </select>
+                    <button type="button" class="btn-pdf "  style="background-color:#e74c3c" onclick="generateReport('pdf')"> PDF</button>
+                    <button type="button" class="btn-excel" style="background-color:#2ecc71" onclick="generateReport('excel')">Excel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function generateReport(type) {
+        const reportList = document.getElementById('reportList').value;
+
+        if (!reportList) {
+            alert("Veuillez sélectionner une liste.");
+            return;
+        }
+
+        if (type === 'pdf') {
+            // Lancer la génération du PDF
+            window.location.href = `/generate-report?list=${reportList}&type=pdf`;
+        } else if (type === 'excel') {
+            // Lancer la génération de l'Excel
+            window.location.href = `/generate-report?list=${reportList}&type=excel`;
+        }
+    }
+
+    function resetForm() {
+        document.getElementById('reportForm').reset();
+    }
+</script>
+</body>
+</html>

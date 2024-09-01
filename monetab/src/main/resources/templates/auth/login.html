@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="fr"
+      xlmlns="https://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Mon Etab</title>
+    <link rel="stylesheet" th:href="@{css/styles.css}">
+    <link rel="stylesheet" th:href="@{css/sidebar.css}">
+
+
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Mon Etab</h1>
+    <form>
+        <input type="text" placeholder="Identifiant" >
+        <input type="password" placeholder="Mot de passe" >
+        <a th:href="@{/home}" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-align: center; border-radius: 4px; text-decoration: none;">Se connecter</a>
+
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

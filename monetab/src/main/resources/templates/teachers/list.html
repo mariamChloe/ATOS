@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Etab - Tableau de bord</title>
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+
+<div class="content1">
+    <div class="back-button">
+        <h1 style="color:black;">Professseurs(<span th:text="${teachers.size()}"></span>)</h1>
+        <a th:href="@{/teachers/show_add_Teacher_form}" ><i class="fas fa-arrow-left"></i>Nouveau Professeur</a>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Genre</th>
+            <th>Matière</th>
+            <th>Vacant</th>
+            <th>Age</th>
+            <th>Téléphone</th>
+            <th>Ville</th>
+            <th>Genre</th>
+            <th>Id</th>
+
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="teacher:${teachers}" >
+            <td th:text="${teacher.getNom()}"></td>
+            <td th:text="${teacher.getPrenom()}"></td>
+            <td th:text="${teacher.getVille()}"></td>
+            <td th:text="${teacher.getDateDeNaissaince()}"></td>
+            <td th:text="${teacher.getMatiere()}"></td>
+            <td>25</td>
+            <td th:text="${teacher.getProchainCours()}"></td>
+            <td th:text="${teacher.getSujetProchaineReunion()}"></td>
+            <td th:text="${teacher.getGenre()}"></td>
+            <td th:text="${teacher.getId()}"></td>
+
+            <td>
+                <a class="update-icon" th:href="@{/teachers/update-teacher/{id}(id=${teacher.id})}">Modifier</a>
+                <a class="delete-icon"
+                   data-id="${teacher.id}"
+                   href="#"
+                   style="background-color: rgb(212, 21, 21); color: white;">
+                    Supprimer
+                </a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="confirmationPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.5); align-items:center; justify-content:center;">
+    <div class="confirmation-container" style="background-color:white; padding:20px; border-radius:5px; text-align:center;">
+        <h2>Êtes-vous sûr de vouloir supprimer cet Professeur ?</h2>
+        <form id="deleteForm" method="POST">
+            <button type="submit" class="btn-confirm" style="background-color: red; color: white;">Confirmer</button>
+            <button type="button" class="btn-cancel" style="background-color: rgb(128,128,128); color: white;" onclick="closePopup()">Annuler</button>
+        </form>
+
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const deleteIcons = document.querySelectorAll('.delete-icon');
+        const popup = document.getElementById('confirmationPopup');
+        const deleteForm = document.getElementById('deleteForm');
+
+        deleteIcons.forEach(icon => {
+            icon.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                const id = this.getAttribute('data-id');
+                if (id) {
+                    deleteForm.action = `/delete-teacher/${id}`;
+                    popup.style.display = 'flex';
+                }
+            });
+        });
+    });
+
+    function closePopup() {
+        document.getElementById('confirmationPopup').style.display = 'none';
+    }
+
+
+</script>
+</body>
+</html>

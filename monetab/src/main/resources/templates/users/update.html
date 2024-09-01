@@ -1,0 +1,92 @@
+<head>
+    <html lang="en"
+          xlmlns="https://www.w3.org/1999/xhtml"
+          xmlns:th="http://www.thymeleaf.org"
+    >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Élèves</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+
+
+<div class="content">
+    <div class="container">
+        <h1>Modifier Utilisateur</h1>
+        <form id="addStudentForm">
+
+
+            <div class="form-group">
+                <label for="pseudo">Pseudo:</label>
+                <input type="text" id="pseudo" name="pseudo" required>
+            </div>
+            <div class="form-group">
+                <label for="password"> Ancien Mot de passe:</label>
+                <input type="text" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="Nouveaupassword">Nouveau  Mot de passe:</label>
+                <input type="text" id="Nouveaupassword" name="classe" required>
+            </div>
+            <div class="form-group">
+                <label for="Confirme_password">Confirme Mot de passe:</label>
+                <input type="text" id="Confirme_password" name="classe" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enregistrer</button>
+                <button type="button" class="cancel-button" onclick="resetForm()">Annuler</button>
+
+            </div>
+        </form>
+    </div>
+
+
+
+</div>
+
+<script>
+    document.getElementById('addStudentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const id = document.getElementById('id').value;
+        const nom = document.getElementById('nom').value;
+        const prenom = document.getElementById('prenom').value;
+        const ville = document.getElementById('ville').value;
+        const classe = document.getElementById('classe').value;
+        const matricule = document.getElementById('matricule').value;
+        const dateNaissance = document.getElementById('dateNaissance').value;
+
+        if (!id || !nom || !prenom || !ville || !classe || !matricule || !dateNaissance) {
+            alert("Veuillez remplir tous les champs.");
+            return;
+        }
+
+        console.log({
+            id,
+            nom,
+            prenom,
+            ville,
+            classe,
+            matricule,
+            dateNaissance
+        });
+
+        alert("Élève ajouté avec succès!");
+    });
+
+    function selectClass(className) {
+        if (className) {
+            document.getElementById('classe').value = className;
+        }
+    }
+</script>
+
+</body>
+</html>

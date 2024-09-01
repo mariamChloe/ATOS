@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <html lang="en"
+          xlmlns="https://www.w3.org/1999/xhtml"
+          xmlns:th="http://www.thymeleaf.org"
+    >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Élèves</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#" class="return-button" onclick="window.location.href='/teachers'">
+    <i class="fas fa-arrow-left"></i>
+</a>
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+<div class="content">
+    <div class="container">
+        <div class="form-wrapper">
+            <h2>Ajouter Professeur</h2>
+            <form id="addStudentForm">
+                <div class="form-group">
+                    <label for="id">ID du Professeur:</label>
+                    <input type="number" id="id" name="id" >
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prénom:</label>
+                    <input type="text" id="prenom" name="prenom" >
+                </div>
+                <div class="form-group">
+                    <label for="ville">Ville:</label>
+                    <input type="text" id="ville" name="ville" >
+                </div>
+                <div class="form-group">
+                    <label for="classe">Telephone:</label>
+                    <input type="text" id="classe" name="classe" >
+                </div>
+
+                <div class="form-group">
+                    <label for="dateNaissance">Date de naissance:</label>
+                    <input type="date" id="dateNaissance" name="dateNaissance">
+                </div>
+                <div class="form-group">
+                    <label for="nom">Nom du Professeur:</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <!-- Other form fields here -->
+                <div class="form-actions">
+                    <button type="submit">Ajouter</button>
+                    <button type="button" class="cancel-button" onclick="resetForm()">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="class-select">
+        <label for="classSelect">Sélectionnez la Matière</label>
+        <select id="classSelect" onchange="selectClass(this.value)">
+            <option value="">Sélectionner votre matière</option>
+            <option value="6ème">Français</option>
+            <option value="5ème">Mathématiques</option>
+            <option value="4ème">Histoire</option>
+            <option value="3ème">Informatique</option>
+            <option value="2nde">Anglais</option>
+            <option value="1ère">SVT</option>
+            <option value="Terminale">Terminale</option>
+        </select>
+        <button type="button" onclick="selectClass()">Sélectionner</button>
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+<script>
+    document.getElementById('addStudentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const id = document.getElementById('id').value;
+        const nom = document.getElementById('nom').value;
+        const prenom = document.getElementById('prenom').value;
+        const ville = document.getElementById('ville').value;
+        const classe = document.getElementById('classe').value;
+        const matricule = document.getElementById('matricule').value;
+        const dateNaissance = document.getElementById('dateNaissance').value;
+
+        if (!id || !nom || !prenom || !ville || !classe || !matricule || !dateNaissance) {
+            alert("Veuillez remplir tous les champs.");
+            return;
+        }
+
+        console.log({
+            id,
+            nom,
+            prenom,
+            ville,
+            classe,
+            matricule,
+            dateNaissance
+        });
+
+        alert("Élève ajouté avec succès!");
+    });
+
+    function selectClass(className) {
+        if (className) {
+            document.getElementById('classe').value = className;
+        }
+    }
+</script>
+
+
+</body>
+</html>

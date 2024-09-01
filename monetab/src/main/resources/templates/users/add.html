@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Utilisateur</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/sidebar.css}">
+</head>
+<body>
+<div class="sidebar" th:insert="fragments/fragment::head"></div>
+
+<div class="content">
+    <div class="container">
+        <h1>Ajouter un Utilisateur</h1>
+        <form id="addStudentForm" th:action="@{/users/add}" method="post">
+
+            <div class="form-group">
+                <label for="pseudo">Pseudo:</label>
+                <input type="text" id="pseudo" name="pseudo" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirmer Mot de passe:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+
+            <!-- Updated button layout -->
+            <div class="form-group buttons-group">
+                <button type="submit">Ajouter</button>
+                <button type="button" class="cancel-button" onclick="resetForm()">Annuler</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById('addStudentForm').addEventListener('submit', function(event) {
+        const pseudo = document.getElementById('pseudo').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm_password').value;
+
+        if (!pseudo || !password || !confirmPassword) {
+            alert("Veuillez remplir tous les champs.");
+            event.preventDefault();
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert("Les mots de passe ne correspondent pas.");
+            event.preventDefault();
+            return;
+        }
+
+        alert("Utilisateur ajouté avec succès!");
+    });
+
+    function resetForm() {
+        document.getElementById('addStudentForm').reset();
+    }
+</script>
+</body>
+</html>
